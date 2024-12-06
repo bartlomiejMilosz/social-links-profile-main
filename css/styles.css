@@ -1,0 +1,112 @@
+:root {
+  /* Colors */
+  --color-text-primary: hsl(0, 0%, 100%);
+  --color-accent-primary: hsl(75, 94%, 57%);
+  --color-background-primary: hsl(0, 0%, 8%);
+  --color-background-card: hsl(0, 0%, 12%);
+  --color-button-background-primary: hsl(0, 0%, 20%);
+
+  /* Font Sizes */
+  --text-paragraph: 14px;
+  --text-heading-large: 24px;
+
+  /* Font Weights */
+  --font-weight-small: 400;
+  --font-weight-medium: 600;
+  --font-weight-large: 700;
+
+  /* Breakpoints */
+  --breakpoint-mobile: 375px;
+  --breakpoint-desktop: 1440px;
+
+  /* Spacing */
+  --spacing-small: 8px;
+  --spacing-medium: 16px;
+  --spacing-large: 24px;
+  --spacing-xlarge: 36px;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("../assets/fonts/Inter-VariableFont_slnt\,wght.ttf")
+    format("truetype");
+  font-weight: 400 700;
+  font-style: normal;
+}
+
+/* Base */
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: var(--color-background-primary);
+  font-family: Inter, sans-serif;
+  font-weight: var(--font-weight-small);
+  font-style: normal;
+  font-size: var(--text-paragraph);
+  color: var(--color-text-primary);
+}
+
+h1 {
+  font-size: var(--text-heading-large);
+  font-weight: var(--font-weight-medium);
+}
+
+p {
+  font-style: normal;
+}
+
+article {
+  background-color: var(--color-background-card);
+  padding: var(--spacing-xlarge);
+  border-radius: 12px;
+  min-width: var(--breakpoint-mobile);
+}
+
+section {
+  margin-top: var(--spacing-medium);
+  width: 100%;
+}
+
+button {
+  width: 100%;
+  height: 36px;
+  margin: var(--spacing-small) 0;
+  background-color: var(--color-button-background-primary);
+  border: 0;
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-primary);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: var(--color-accent-primary);
+  color: var(--color-background-card);
+}
+
+/* Media */
+
+img {
+  border-radius: 50%;
+  max-width: 75px;
+  height: auto;
+  margin-bottom: var(--spacing-large);
+}
+
+/* Custom classes */
+
+.flex-container-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.address-text {
+  color: var(--color-accent-primary);
+  font-weight: var(--font-weight-large);
+  margin-bottom: var(--spacing-large);
+}
